@@ -5,20 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">    
     <title>Новогодняя ярмарка</title>
 </head>
 <body>
     <div class="page">
-        <header class="header">
-            <div class="container">
-                <div class="header__inner">
-                    <a href="https://vadimkurkin.com/" target="_blank" class="header__logo">
-                        <img src="img/intro/logo.png" alt="Образовательный центр Вадима Куркина">
-                    </a>
-                </div>
-            </div>
-        </header>
+        
         <section class="intro">
+            <header class="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <a href="https://vadimkurkin.com/" target="_blank" class="header__logo">
+                            <img src="img/intro/logo.png" alt="Образовательный центр Вадима Куркина">
+                        </a>
+                    </div>
+                </div>
+            </header>
             <div class="container">
                 <div class="intro__inner">
                     <div class="intro__text">
@@ -30,7 +34,7 @@
                             свои таланты. Осуществи свои мечты</p>
                     </div>
                     <img class="intro__img intro__img--pc" src="img/intro/intro-img.svg" alt="">
-                    <img class="intro__img intro__img--m" src="img/intro/mob/intro-img-m.png" alt="">  
+                    <img class="intro__img intro__img--m" src="img/intro/mob/intro-img-m.svg" alt="">  
                 </div>              
             </div>
         </section>
@@ -42,25 +46,25 @@
                             <div class="timer__inner--item">
                                 <div class="timer__inner--item__col">
                                     <div class="timer__inner--item__num" id="days"></div>
-                                    <div class="timer__inner--item__text"> дней</div>
+                                    <div class="timer__inner--item__text">дней</div>
                                 </div>
                             </div>
                             <div class="timer__inner--item">
                                 <div class="timer__inner--item__col">
                                     <div class="timer__inner--item__num" id="hours"></div>
-                                    <div class="timer__inner--item__text timer__inner--item__text--blue">:</div>
+                                    <div class="timer__inner--item__text">часов</div>
                                 </div>
                             </div>
                             <div class="timer__inner--item">
                                 <div class="timer__inner--item__col">
                                     <div class="timer__inner--item__num" id="minutes"></div>
-                                    <div class="timer__inner--item__text timer__inner--item__text--blue">:</div>
+                                    <div class="timer__inner--item__text">минут</div>
                                 </div>
                             </div>
                             <div class="timer__inner--item">
                                 <div class="timer__inner--item__col">
                                     <div class="timer__inner--item__num" id="seconds"></div>
-                                    <div class="timer__inner--item__text"></div>
+                                    <div class="timer__inner--item__text">секунд</div>
                                 </div>
                             </div>
                     </div>
@@ -189,7 +193,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="package__item package__item--m package__item--left">
+                <div class="package__item package__item--m package__item--left">
                     <div class="package__item--header package__item--header__left">
                         <svg><use href="sprite.svg#smile"></use></svg>
                         <h4 class="package__item--header__title">I пакет</h4>
@@ -292,7 +296,7 @@
                         <p  class="package__buy">Купить</p>
                         <svg class="package__buy--arrow"><use href="sprite.svg#arrow"></use></svg>
                     </a>
-                </div> -->
+                </div>
 
                 <div class="package__item package__item--pc package__item--center">
                     <div class="package__item--header package__item--header__center">
@@ -857,6 +861,103 @@
                 </div>
             </div>
         </section>
+        <!-- Если больше трех пакетов -->
+        <!-- <section class="package">
+            <div class="container">
+                <div class="package__inner">
+                    <div class="owl-carousel owl-theme">
+                        <div class="package__inner--item">
+                            <div class="package__inner--item__header">
+                                <p class="package__title">I пакет</p>
+                                <small>Чтобы увидеть описание курса, нажмите на название</small>
+                            </div>
+                            <div class="package__inner--item__body">
+                                <div class="package__inner--item__links">
+                                    <a class="package__link" id="rrs">Курс «Родители, род, семья»</a>
+                                    <a class="package__link" id="talent">Курс «Как найти свой талант»</a>
+                                </div>
+                                <div class="package__inner--item__text">
+                                    <p class="package__inner--title" id="title">Курс «Родители, род, семья»</p>
+                                    <p class="package__inner--time" id="time">Первая ступень, 6 уроков</p>
+                                    <p class="package__inner--description" id="description">Каким ресурсом для нас может быть семья и род, и как использовать этот ресурс в полную силу. Все о родовых и семейных системах и нашем месте в них. Как работать с негативными родовыми установками и менять свое настоящее и будущее в лучшую сторону. </p>
+                                    <p class="package__inner--price">Цена курса<br> без скидки: <span id="price" class=" package__inner--price package__inner--price__pink">9 500 руб.</span></p>
+                                </div>
+                            </div>
+                            <div class="package__inner--item__footer">
+                                <div class="package__price">
+                                    <p class="package__title">Цена за I пакет:</p>
+                                    <p class="package__price--old">57 990 рублей</p>
+                                    <p class="package__price--new">9 500 рублей</p>
+                                </div>
+                                <a href="#" class="button">Купить</a>
+                            </div>
+                        </div>
+                        <div class="package__inner--item">
+                            <div class="package__inner--item__header">
+                                <p class="package__title">I пакет</p>
+                                <small>Чтобы увидеть описание курса, нажмите на название</small>
+                            </div>
+                            <div class="package__inner--item__body">
+                                <div class="package__inner--item__links">
+                                    <a class="package__link" id="rrs">Курс «Родители, род, семья»</a>
+                                    <a class="package__link" id="talent">Курс «Как найти свой талант»</a>
+                                </div>
+                                <div class="package__inner--item__text">
+                                    <p class="package__inner--title" id="title">Курс «Родители, род, семья»</p>
+                                    <p class="package__inner--time" id="time">Первая ступень, 6 уроков</p>
+                                    <p class="package__inner--description" id="description">Каким ресурсом для нас может быть семья и род, и как использовать этот ресурс в полную силу. Все о родовых и семейных системах и нашем месте в них. Как работать с негативными родовыми установками и менять свое настоящее и будущее в лучшую сторону. </p>
+                                    <p class="package__inner--price">Цена курса<br> без скидки: <span id="price" class=" package__inner--price package__inner--price__pink">9 500 руб.</span></p>
+                                </div>
+                            </div>
+                            <div class="package__inner--item__footer">
+                                <div class="package__price">
+                                    <p class="package__title">Цена за I пакет:</p>
+                                    <p class="package__price--old">57 990 рублей</p>
+                                    <p class="package__price--new">9 500 рублей</p>
+                                </div>
+                                <a href="#" class="button">Купить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="feedback">
+            <div class="container">
+                <div class="feedback__inner">
+                    <div class="feedback__inner--item">
+                        <p class="subtitle subtitle--feedback text--uppercase"><span class="text--bold title">Если у вас остались вопросы,</span> оставьте заявку – мы свяжемся с вами в ближайшее время и с радостью поможем </p>
+                    </div>
+                    <div class="feedback__form">
+                        <form id="ltForm5388675"  action="https://kurs-kurkin.ru/pl/lite/block-public/process-html?id=1197597562" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
+                            <input class="feedback__input" required type="text" maxlength="60"  placeholder="Имя" name="formParams[first_name]" value=""><br>
+                            <input class="feedback__input" required type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
+                            <input class="feedback__input" required type="text" maxlength="60"  placeholder="E-mail" name="formParams[email]" value="" ><br>
+                            <button class="button button--feedback" type="submit"
+                                    id="button864421" onclick="if(window['btnprs6176bea4032ba']){return false;}window['btnprs6176bea4032ba']=true;setTimeout(function(){window['btnprs6176bea4032ba']=false},6000);return true;">
+                                Отправить</button><br>
+                            <input type="hidden" id="5121846176bea3e9e29" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value="">
+                            <input type="hidden" id="5121846176bea3e9e29ref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value="">
+                            <input type="hidden" name="requestTime" value="1635172004">
+                            <input type="hidden" name="requestSimpleSign" value="15c7f156f5292d38930101e97c1378f4">
+                            <input type="hidden" name="isHtmlWidget" value="1"/></form><span id="gccounterImgContainer"></span><script>
+                                window.addEventListener('load', function(){
+                                    let loc = document.getElementById("5121846176bea3e9e29");
+                                    loc.value = window.location.href;
+                                    let ref = document.getElementById("5121846176bea3e9e29ref");
+                                    ref.value = document.referrer;
+                                    
+                                    let statUrl = "https://kurs-kurkin.ru/stat/counter?ref=" + encodeURIComponent(document.referrer)
+                                        + "&loc=" + encodeURIComponent(document.location.href);
+                                    document.getElementById('gccounterImgContainer').innerHTML
+                                        = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+                                });
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </section>
         <footer class="footer">
             <div class="container">
                 <h4 class="title text--center">Будьте с нами!</h4>
@@ -884,13 +985,55 @@
             </div>
         </footer>
     </div>
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            items: 2,
+            nav: true,
+            loop: false,
+            navText: ["<img src='img/package/arrow-prev.svg'>", "<img src='img/package/arrow-next.svg'>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    center: true,
+                    margin: 20
+                }
+        }
+    })
+</script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone-with-data.min.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/jquery.modal.min.js"></script>
+
+    <script>
+        $(document).ready(function($) {
+            $('.package__link').on("click",function(event) {
+                let key = event.target.id;
+                $.getJSON("/information.json", function(data) {
+                    let title = data[key].title;
+                    let time = data[key].time;
+                    let description = data[key].description;
+                    let price = data[key].price;
+                    console.log(event.target);
+                    let obj = event.target.parentNode.parentNode.lastElementChild;
+
+                    console.log(obj);
+                    console.log(obj.childNodes);
+                    obj.childNodes[1].innerHTML = title;
+                    obj.childNodes[3].innerHTML = time;
+                    obj.childNodes[5].innerHTML = description;
+                    obj.childNodes[7].firstChild.innerHTML = price;
+                })
+            });
+        });
+        </script>
+
+        <!-- Скрипт для мобильной версии пакетов -->
     <script>
         $(document).ready(function() {
            $(".package__link").click(function() {
@@ -899,13 +1042,16 @@
            })
         });
     </script>
-    <script>
-        $(function(){
-            $('.button--intro').on('click', function(e){
-            $('html,body').stop().animate({ scrollTop: $('#buy').offset().top }, 1000);
-            e.preventDefault();
-            });
+
+
+    <!-- Скрипт для прокрутки -->
+    <!-- <script>
+        $('a[href*="#"]').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1500);
+        return false;
         });
-    </script>
+    </script> -->
 </body>
 </html>
