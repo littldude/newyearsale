@@ -204,7 +204,7 @@ input {
 .timer {
     background-color: #ffffff;
     padding: 25px 0;
-    //position: sticky;
+    position: sticky;
     z-index: 100;
     top: 0;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
@@ -443,21 +443,6 @@ input {
                 &::before {
                     content: '';
                     position: absolute;
-                    top: -150px;
-                    right: 0;
-                    background-image: url('../img/package/package-img-1.svg');
-                    background-size: 100%;
-                    background-repeat: no-repeat;
-                    display: block;
-                    width: 174px;
-                    height: 314.17px;
-                }
-            }
-            &__center {
-                position: relative;
-                &::before {
-                    content: '';
-                    position: absolute;
                     top: -97px;
                     right: -25px;
                     background-image: url('../img/package/package-img-2.svg');
@@ -466,6 +451,21 @@ input {
                     display: block;
                     width: 375px;
                     height: 195px;
+                }
+            }
+            &__center {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -160px;
+                    right: 0;
+                    background-image: url("../img/package/recommended.svg");
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    display: block;
+                    width: 270px;
+                    height: 290px;
                 }
             }
             &__right {
@@ -871,28 +871,65 @@ input {
         }
     }
 }
+.margin {
+    margin-bottom: 35px;
+}
+.buy {
+    &__inner {
+        &--currency {
+            font-family: 'Proxima Nova';
+            margin-top: 10px;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            p {
+                margin: 0;
+                &::after {
+                    content: "/";
+                    padding: 0 5px;
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
 @media(max-width: 1650px) {
     .package {
         &__item {
             &--header {
+                padding: 46px 125px 34px 55px;
                 &__left {
                     &::before {
-                        width: 141px;
-                        height: 258px;
+                        width: 275px;
+                        height: 145px;
                     }
                 }
                 &__center {
                     &::before {
-                        width: 306px;
-                        height: 162px;
+                        width: 219px;
+                        height: 237px;
                     }
                 }
                 &__right {
                     &::before {
-                        width: 262px;
-                        height: 225px;
+                        top: -154px;
+                        width: 238px;
+                        height: 201px;
                     }
                 }
+            }
+            &--price {
+                padding: 5px 0 0 86px;
+            }
+            &--body {
+                padding: 31px 100px 31px 55px;
+            }
+            &--footer {
+                padding: 38px 0 45px 55px;
             }
         }
     }
@@ -925,7 +962,7 @@ input {
     .package {
 		&__item {
 			&--header {
-				padding: 30px 80px 30px 25px;
+				// padding: 30px 80px 30px 25px;
                 &__left {
                     svg {
                         width: 115px;
@@ -946,14 +983,16 @@ input {
                     }
                 }
 			}
-			&--body {
-				padding: 30px 108px 30px 25px;
-			}
-			&--price {
-				padding: 5px 0 60px 25px;
-			}
+			// &--body {
+			// 	padding: 30px 108px 30px 25px;
+			// }
+			// &--price {
+			// 	padding: 5px 0 60px 25px;
+			// }
             &--footer {
-                padding: 40px 0;
+                svg {
+                    display: none;
+                }
             }
 		}
 		&__img {
@@ -973,9 +1012,23 @@ input {
 			}
 		}
 	}
-	.arrow {
-		margin-left: 20px;
-	}
+	// .arrow {
+	// 	margin-left: 20px;
+	// }
+}
+@media (max-width: 1196px) {
+    .package {
+        &__item {
+            &--footer {
+                padding: 38px 0 45px 40px;
+            }
+        }
+    }
+}
+@media (max-width: 1134px) {
+    .margin {
+        margin-bottom: 60px;
+    }
 }
 @media (max-width: 1080px) {
     .feedback {
@@ -1128,6 +1181,9 @@ input {
     .package {
         padding: 60px 0 0 0;
         overflow: hidden;
+        &__credit {
+            align-items: center;
+        }
         &__inner {
             display: flex;
             flex-direction: column;
@@ -1135,19 +1191,20 @@ input {
         }
         &__item {
             width: 80%;
-            margin-bottom: 50px;
+            margin-bottom: 160px;
+            &:last-child {
+                margin-bottom: 0;
+            }
             &--header {
                 border-bottom: none;
-                &:first-of-type {
+                &__center {
                     &::before {
-                        top: -144px;
-                        right: -45px;
-                        background-image: url("../img/package/recommended.svg");
-                        background-size: 100%;
-                        background-repeat: no-repeat;
-                        display: block;
-                        width: 242px;
-                        height: 260px;
+                        top: -130px;
+                    }
+                }
+                &__right {
+                    &::before {
+                        top: -125px;
                     }
                 }
             }
@@ -1230,7 +1287,7 @@ input {
         &::before {
             position: absolute;
             top: 50%;
-            left: -33px;
+            left: 13px;
             transform: rotate(-13.49deg) translateY(-50%);
         }
     }
@@ -1303,12 +1360,12 @@ input {
         }
         &__item {
             &--header {
-                &:first-of-type {
+                &__left{
                     &::before {
-                        top: -116px;
+                        top: -41px;
                         right: -45px;
                         width: 212px;
-                        height: 229px;
+                        height: 114px;
                     }
                 }
             }
@@ -1519,14 +1576,21 @@ input {
         &__item {
             width: 96%;
             &--header {
-                &:first-of-type {
-                    &::before {
-                        top: -115px;
-                        right: -30px;
-                        width: 200px;
-                        height: 217px;
-                    }
-                }
+                // &:first-of-type {
+                //     &::before {
+                //         top: -115px;
+                //         right: -30px;
+                //         width: 200px;
+                //         height: 217px;
+                //     }
+                // }
+            }
+        }
+    }
+    .buy {
+        &__inner {
+            &--currency {
+                margin-bottom: 0;
             }
         }
     }
@@ -1551,14 +1615,6 @@ input {
                 small {
                     font-size: 10px;
                     line-height: 14px;
-                }
-                &:first-of-type {
-                    &::before {
-                        width: 158px;
-                        height: 172px;
-                        top: -70px;
-                        right: -25px;
-                    }
                 }
             }
             &--body {
@@ -1694,12 +1750,30 @@ input {
         overflow: hidden;
         &__item {
             &--header {
+                padding: 31px 50px 31px 10px;
                 small {
                     width: 150px;
                 }
+                &__center {
+                    &::before {
+                        width: 169px;
+                        height: 186px;
+                        top: -95px;
+                    }
+                }
+                &__right {
+                    &::before {
+                        width: 170px;
+                        height: 147px;
+                        top: -75px;
+                        right: -9px
+                    }
+                }
             }
         }
-        
+        &__inner {
+            padding: 100px 0 0 0;
+        }
     }
     .autor {
         &__inner {
@@ -1752,6 +1826,12 @@ input {
     .video {
         &__inner {
             height: 196px;
+        }
+    }
+    .package {
+        &__credit {
+            width: 180px;
+            text-align: center;
         }
     }
 }
