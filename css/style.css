@@ -378,6 +378,11 @@ input {
   line-height: 25px;
 }
 
+.credit {
+  color: #4782AC;
+  font-weight: 700;
+}
+
 .package {
   padding: 90px 0 0 0;
 }
@@ -389,6 +394,34 @@ input {
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   gap: 0px 0px;
+}
+.package__credit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.package__credit--link {
+  color: #000000;
+  margin-bottom: 10px;
+}
+.package__credit--link__tinkof {
+  position: relative;
+}
+.package__credit--link__tinkof::before {
+  position: absolute;
+  top: 0;
+  left: -32px;
+  content: "";
+  background-image: url("../img/tinkof.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 22px;
+}
+.package__credit--link:last-child {
+  margin-bottom: 0;
 }
 .package__item {
   position: relative;
