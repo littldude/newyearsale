@@ -205,7 +205,7 @@ input {
     background-color: #ffffff;
     padding: 25px 0;
     position: sticky;
-    z-index: 100;
+    z-index: 1;
     top: 0;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
     &__title {
@@ -621,7 +621,7 @@ input {
 	display: none;
 	vertical-align: middle;
 	position: relative;
-	z-index: 8;
+	z-index: 100;
 	max-width: 600px;
     border-radius: 60px;
 	box-sizing: border-box;
@@ -1754,19 +1754,28 @@ input {
                 small {
                     width: 150px;
                 }
+                &__left {
+                    &::before {
+                        top: -45px;
+                        right: -45px;
+                        width: 232px;
+                        height: 122px;
+                    }
+                }
                 &__center {
                     &::before {
-                        width: 169px;
-                        height: 186px;
-                        top: -95px;
+                        width: 216px;
+                        height: 232px;
+                        top: -123px;
+                        right: -34px;
                     }
                 }
                 &__right {
                     &::before {
-                        width: 170px;
-                        height: 147px;
-                        top: -75px;
-                        right: -9px
+                        width: 189px;
+                        height: 161px;
+                        top: -95px;
+                        right: 0px;
                     }
                 }
             }
