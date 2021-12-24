@@ -1069,7 +1069,7 @@ input {
     transform: translateX(-50%);
   }
   .button--buy {
-    margin: 25px auto 0 auto;
+    margin: 25px 0 0 0;
   }
 
   .open {
@@ -1123,9 +1123,6 @@ input {
     padding: 60px 0 0 0;
     overflow: hidden;
   }
-  .package__credit {
-    align-items: center;
-  }
   .package__inner {
     display: flex;
     flex-direction: column;
@@ -1140,6 +1137,7 @@ input {
   }
   .package__item--header {
     border-bottom: none;
+    padding: 31px 50px 31px 45px;
   }
   .package__item--header__center::before {
     top: -130px;
@@ -1186,10 +1184,9 @@ input {
     background-color: #EBA7BE;
   }
   .package__item--price {
-    padding: 30px 0 40px 0;
+    padding: 30px 50px 40px 45px;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   .package__item--pc {
     display: none;
@@ -1211,6 +1208,10 @@ input {
   }
   .package__buy {
     color: #ffffff;
+  }
+
+  .buy__inner--currency {
+    margin-bottom: 30px;
   }
 
   .top::before {
@@ -1389,6 +1390,10 @@ input {
     width: 35px;
     height: 35px;
   }
+
+  .buy__inner--currency {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 568px) {
   .title {
@@ -1434,7 +1439,8 @@ input {
     width: 100%;
   }
   .feedback__inner--item {
-    width: 77%;
+    width: 100%;
+    text-align: left;
   }
 
   .video__inner {
@@ -1457,6 +1463,7 @@ input {
   .package__item {
     width: 96%;
   }
+
   .buy__inner--currency {
     margin-bottom: 0;
   }
@@ -1466,6 +1473,11 @@ input {
   }
 }
 @media (max-width: 450px) {
+  .title--feedback {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
   .text--intro {
     width: 50%;
   }
@@ -1477,6 +1489,7 @@ input {
   .package__item--header small {
     font-size: 10px;
     line-height: 14px;
+    width: 150px;
   }
   .package__item--body__link {
     font-size: 16px;
@@ -1587,12 +1600,6 @@ input {
   .package {
     overflow: hidden;
   }
-  .package__item--header {
-    padding: 31px 50px 31px 10px;
-  }
-  .package__item--header small {
-    width: 150px;
-  }
   .package__item--header__left::before {
     top: -45px;
     right: -45px;
@@ -1648,11 +1655,6 @@ input {
 
   .video__inner {
     height: 196px;
-  }
-
-  .package__credit {
-    width: 180px;
-    text-align: center;
   }
 }
 @media (max-width: 320px) {
