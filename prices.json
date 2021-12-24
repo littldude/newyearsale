@@ -1,0 +1,16 @@
+{
+    "fair": {
+        "fair1": {
+            "oldPrice": 28100,
+            "newPrice": 7900
+        },
+        "fair2": {
+            "oldPrice": 71100,
+            "newPrice": 14900
+        },
+        "fair3": {
+            "oldPrice": 145600,
+            "newPrice": 47900
+        }
+    }
+}
